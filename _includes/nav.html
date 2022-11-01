@@ -1,7 +1,20 @@
-<div class='nav'>
-    <ul class='wrap'>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/blog'>Blog</a></li>
-        <li><a href='/feed.xml'>RSS</a></li>
-    </ul>
-</div>
+<nav>
+  {% for item in site.data.nav %}
+    <a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
+      {{ item.name }}
+    </a>
+  {% endfor %}
+</nav>
+
+<!-- <nav>
+  <a href="/">Home</a>
+  <a href="/about.html">About</a>
+</nav> -->
+
+<!-- <div class='nav'>
+  <ul class='wrap'>
+      <li><a href='/'>Home</a></li>
+      <li><a href='/blog'>Blog</a></li>
+      <li><a href='/feed.xml'>RSS</a></li> 
+  </ul>
+</div> -->
