@@ -1,0 +1,20 @@
+p {
+    color: rgb(38, 30, 30);
+    width: 600px;
+    border: 0px solid black;
+  }
+
+body {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #f6f8f8;
+    padding: 0 20px 20px 20px;
+    border: 0px solid black;
+}
+h3 {
+    margin: 0;
+    padding: 20px 0;
+    color: #b1b5b9;
+    font-style: 400;
+    
+  }
