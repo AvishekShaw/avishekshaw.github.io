@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-04T20:53:29+05:30</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">The intuitions of Poisson Distribution</title><link href="http://localhost:4000/2022/11/01/poisson.html" rel="alternate" type="text/html" title="The intuitions of Poisson Distribution" /><published>2022-11-01T00:00:00+05:30</published><updated>2022-11-01T00:00:00+05:30</updated><id>http://localhost:4000/2022/11/01/poisson</id><content type="html" xml:base="http://localhost:4000/2022/11/01/poisson.html"><![CDATA[<p>We learn distributions by rote. That limits our capability to understand the intuitions behind it.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-02-28T09:54:04+05:30</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">The intuitions of Poisson Distribution</title><link href="http://localhost:4000/2022/11/01/poisson.html" rel="alternate" type="text/html" title="The intuitions of Poisson Distribution" /><published>2022-11-01T00:00:00+05:30</published><updated>2022-11-01T00:00:00+05:30</updated><id>http://localhost:4000/2022/11/01/poisson</id><content type="html" xml:base="http://localhost:4000/2022/11/01/poisson.html"><![CDATA[<p>We learn distributions by rote. That limits our capability to understand the intuitions behind it.</p>
 
 <p>In this post, we will play around with the various components of a poisson distribution to understand it better. The poisson distribution is stated as:</p>
 
@@ -9,7 +9,7 @@
 <div class="figure">
     <img src="/image/poisson-comp.png" style="width: 100%; display: block; margin: 0 auto;" />
     <div class="caption">
-        <span class="caption-label">Figure 1.</span> Diagram of rejection sampling. The 
+        <span class="caption-label">Figure 0.</span> Diagram of rejection sampling. The 
         density $q(\mathbf{z})$ must be always greater than $p(\mathbf{x})$. A new sample 
         is rejected if it falls in the gray region and accepted otherwise. These accepted 
         samples are distributed according to $p(\mathbf{x})$. This is achieved by sampling 
@@ -18,7 +18,41 @@
     </div>
 </div>
 
-<p>The first thing to notice is that the poisson distribution is a discrete distribution. This means that it can only take integer values. The second thing to notice is that the poisson distribution is a probability mass function. This means that it is a function that gives the probability of a certain event happening. The third thing to notice is that the poisson distribution is a function of two variables. The first variable is the number of events that happen in a given time period. The second variable is the rate at which the events happen. The rate is usually denoted by $\lambda$.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[We learn distributions by rote. That limits our capability to understand the intuitions behind it.]]></summary></entry><entry><title type="html">Example</title><link href="http://localhost:4000/2022/06/21/example.html" rel="alternate" type="text/html" title="Example" /><published>2022-06-21T00:00:00+05:30</published><updated>2022-06-21T00:00:00+05:30</updated><id>http://localhost:4000/2022/06/21/example</id><content type="html" xml:base="http://localhost:4000/2022/06/21/example.html"><![CDATA[<p>A banana is an edible fruit – botanically a berry – produced by several kinds
+<p>The first thing to notice is that the poisson distribution is a discrete distribution. This means that it can only take integer values. The second thing to notice is that the poisson distribution is a probability mass function. This means that it is a function that gives the probability of a certain event happening. The third thing to notice is that the poisson distribution is a function of two variables. The first variable is the number of events that happen in a given time period. The second variable is the rate at which the events happen. The rate is usually denoted by $\lambda$.</p>
+
+<h1 id="innocent-convicts-and-your-next-nuclear-disasters">Innocent Convicts and your next Nuclear Disasters</h1>
+
+<p>(Simeon may not have worked on horse kick deaths. He may have worked on no. of innocents being convicted per year)</p>
+
+<p>How many soldiers would die next year due to horsekicks? This question intrigued Simeon Denis Poisson. (Do we include some short history/tidbit of Possion?).   He started out to predict the horsekick-deaths by making two important assumptions: Independent events ocurring at constant rate.  If a certain event occurs at a constant rate, p per unit time, then, the total events within an interval t is pt. However, this does not give us a picture of the actual distribution of events. How was this derived? The mean and median of the distribution is \lambda</p>
+
+<p>The Poisson distribution is derived using the following assumptions:</p>
+
+<p>1) The occurrence of events is random and independent of each other.
+2) The average rate of occurrence of events is constant over time and space.
+3) The probability of more than one event occurring at the same time or space is negligible.</p>
+
+<p>Let X be a random variable that represents the number of events occurring in a fixed time interval or space. Let λ be the average rate of occurrence of events per unit time or space. Then the probability of X taking the value k (i.e., k events occurring in the fixed interval) is given by:</p>
+
+<p>P(X = k) = e^(-λ) * (λ^k) / k!</p>
+
+<p>where e is the mathematical constant approximately equal to 2.71828, and k! represents the factorial of k.</p>
+
+<p>The derivation of this formula involves using the principles of combinatorics and the binomial distribution. Specifically, if we consider dividing the time interval or space into very small sub-intervals or sub-spaces, the probability of an event occurring in each sub-interval or sub-space is λ/n, where n is the number of sub-intervals or sub-spaces.</p>
+
+<p>If we let n go to infinity and assume that the probability of more than one event occurring in a sub-interval or sub-space is negligible, then we can use the Poisson limit of the binomial distribution to obtain the Poisson distribution formula.</p>
+
+<p>The Poisson distribution is a discrete probability distribution, meaning that it gives the probability of a countable number of events occurring in a fixed interval or space. It is widely used in modeling various real-world phenomena, such as the number of customers arriving at a store, the number of defects in a manufacturing process, or the number of radioactive decays in a given time interval.</p>
+
+<p>Q) What are the applications of Poisson distribution?
+1) You can apply poisson distribution to “Large number of locally rare events”
+2) To study the chances of nuclear disasters. How is this related to your next nuclear disaster you say? Well, imprecise Poisson modeling has (https://www.intechopen.com/chapters/61879)
+3) How many goals in a football match?</p>
+
+<p>Some more properties:
+Sums of poisson RV variables are Poisson distributed. (Find a practical example for this). The converse is also true.</p>
+
+<p>Derivation of poisson distribution, its mean and median</p>]]></content><author><name></name></author><summary type="html"><![CDATA[We learn distributions by rote. That limits our capability to understand the intuitions behind it.]]></summary></entry><entry><title type="html">Example</title><link href="http://localhost:4000/2022/06/21/example.html" rel="alternate" type="text/html" title="Example" /><published>2022-06-21T00:00:00+05:30</published><updated>2022-06-21T00:00:00+05:30</updated><id>http://localhost:4000/2022/06/21/example</id><content type="html" xml:base="http://localhost:4000/2022/06/21/example.html"><![CDATA[<p>A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.</p>
 
 <p>In some countries, bananas used for cooking may be called “plantains”,
