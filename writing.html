@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avishek Shaw</title>
-  <meta name="description" content="Personal website of Avishek Shaw.">
+  <title>Writing - Avishek Shaw</title>
+  <meta name="description" content="Articles and essays by Avishek Shaw.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
       <div class="nav-name"><a href="/">Avishek Shaw</a></div>
       <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="nav-links">
-        <li><a href="writing.html">Writing</a></li>
+        <li><a href="writing.html" class="active">Writing</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
         <li><button class="theme-toggle" aria-label="Toggle dark mode">&#9790;</button></li>
@@ -25,50 +25,30 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <h1>Hi, I'm Avishek.</h1>
-      <p>
-        Welcome to my corner of the internet. I write about things I'm learning,
-        share projects I'm working on, and think out loud about ideas that interest me.
-      </p>
-      <p>
-        This site is where I collect my thoughts and work. Feel free to look around.
-      </p>
-    </section>
+    <div class="page-header">
+      <h1>Writing</h1>
+      <p>Things I've written about — ideas, learnings, and notes.</p>
+    </div>
 
     <section class="section">
-      <h2 class="section-title">Recent Writing</h2>
+      <h2 class="section-title">2026</h2>
       <ul class="post-list">
         <li class="post-item">
-          <span class="post-date">2026-03-15</span>
+          <span class="post-date">Mar 15</span>
           <a class="post-title" href="#">Starting this website</a>
         </li>
         <li class="post-item">
-          <span class="post-date">2026-03-10</span>
+          <span class="post-date">Mar 10</span>
           <a class="post-title" href="#">Things I'm thinking about</a>
         </li>
         <li class="post-item">
-          <span class="post-date">2026-03-01</span>
+          <span class="post-date">Mar 01</span>
           <a class="post-title" href="#">Notes on learning in public</a>
         </li>
       </ul>
-      <a class="section-link" href="writing.html">All writing &rarr;</a>
     </section>
 
-    <section class="section">
-      <h2 class="section-title">Projects</h2>
-      <div class="project-list">
-        <div class="project-card">
-          <h3><a href="#">Project One</a></h3>
-          <p>A brief description of this project and what it does. Replace with your actual project.</p>
-        </div>
-        <div class="project-card">
-          <h3><a href="#">Project Two</a></h3>
-          <p>Another project description. Share what you built and why it matters.</p>
-        </div>
-      </div>
-      <a class="section-link" href="projects.html">All projects &rarr;</a>
-    </section>
+    <!-- Add more year sections as you write more -->
   </main>
 
   <footer>
@@ -83,12 +63,10 @@
   </footer>
 
   <script>
-    // Theme toggle
     const toggle = document.querySelector('.theme-toggle');
     const root = document.documentElement;
     const stored = localStorage.getItem('theme');
     if (stored) root.setAttribute('data-theme', stored);
-
     toggle.addEventListener('click', () => {
       const current = root.getAttribute('data-theme');
       const next = current === 'dark' ? 'light' : 'dark';
@@ -96,13 +74,10 @@
       localStorage.setItem('theme', next);
       toggle.textContent = next === 'dark' ? '☀' : '☾';
     });
-
     if (root.getAttribute('data-theme') === 'dark' ||
         (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       toggle.textContent = '☀';
     }
-
-    // Mobile nav toggle
     document.querySelector('.nav-toggle').addEventListener('click', () => {
       document.querySelector('.nav-links').classList.toggle('open');
     });

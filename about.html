@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avishek Shaw</title>
-  <meta name="description" content="Personal website of Avishek Shaw.">
+  <title>About - Avishek Shaw</title>
+  <meta name="description" content="About Avishek Shaw.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
@@ -18,57 +18,39 @@
       <ul class="nav-links">
         <li><a href="writing.html">Writing</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><button class="theme-toggle" aria-label="Toggle dark mode">&#9790;</button></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
-    <section class="hero">
-      <h1>Hi, I'm Avishek.</h1>
+    <div class="about-content">
+      <h1>About Me</h1>
       <p>
-        Welcome to my corner of the internet. I write about things I'm learning,
-        share projects I'm working on, and think out loud about ideas that interest me.
+        Hi, I'm Avishek Shaw. Welcome to my personal site. This is where I share what I'm working on,
+        what I'm learning, and what I find interesting.
       </p>
+
+      <h2>What I Do</h2>
       <p>
-        This site is where I collect my thoughts and work. Feel free to look around.
+        I'm interested in technology, building things, and understanding how the world works.
+        I like to learn by doing and writing about what I discover along the way.
       </p>
-    </section>
 
-    <section class="section">
-      <h2 class="section-title">Recent Writing</h2>
-      <ul class="post-list">
-        <li class="post-item">
-          <span class="post-date">2026-03-15</span>
-          <a class="post-title" href="#">Starting this website</a>
-        </li>
-        <li class="post-item">
-          <span class="post-date">2026-03-10</span>
-          <a class="post-title" href="#">Things I'm thinking about</a>
-        </li>
-        <li class="post-item">
-          <span class="post-date">2026-03-01</span>
-          <a class="post-title" href="#">Notes on learning in public</a>
-        </li>
-      </ul>
-      <a class="section-link" href="writing.html">All writing &rarr;</a>
-    </section>
+      <h2>This Site</h2>
+      <p>
+        I built this site as a place to collect my thoughts and projects. It's intentionally
+        simple — just HTML and CSS, hosted on GitHub Pages at
+        <a href="https://www.avishekshaw.com">avishekshaw.com</a>.
+      </p>
 
-    <section class="section">
-      <h2 class="section-title">Projects</h2>
-      <div class="project-list">
-        <div class="project-card">
-          <h3><a href="#">Project One</a></h3>
-          <p>A brief description of this project and what it does. Replace with your actual project.</p>
-        </div>
-        <div class="project-card">
-          <h3><a href="#">Project Two</a></h3>
-          <p>Another project description. Share what you built and why it matters.</p>
-        </div>
-      </div>
-      <a class="section-link" href="projects.html">All projects &rarr;</a>
-    </section>
+      <h2>Get in Touch</h2>
+      <p>
+        You can find me on <a href="https://github.com/AvishekShaw" target="_blank" rel="noopener">GitHub</a>
+        or reach me by <a href="mailto:hello@avishekshaw.com">email</a>.
+      </p>
+    </div>
   </main>
 
   <footer>
@@ -83,12 +65,10 @@
   </footer>
 
   <script>
-    // Theme toggle
     const toggle = document.querySelector('.theme-toggle');
     const root = document.documentElement;
     const stored = localStorage.getItem('theme');
     if (stored) root.setAttribute('data-theme', stored);
-
     toggle.addEventListener('click', () => {
       const current = root.getAttribute('data-theme');
       const next = current === 'dark' ? 'light' : 'dark';
@@ -96,13 +76,10 @@
       localStorage.setItem('theme', next);
       toggle.textContent = next === 'dark' ? '☀' : '☾';
     });
-
     if (root.getAttribute('data-theme') === 'dark' ||
         (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       toggle.textContent = '☀';
     }
-
-    // Mobile nav toggle
     document.querySelector('.nav-toggle').addEventListener('click', () => {
       document.querySelector('.nav-links').classList.toggle('open');
     });
